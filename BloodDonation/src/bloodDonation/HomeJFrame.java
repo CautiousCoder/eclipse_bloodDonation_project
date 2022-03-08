@@ -72,7 +72,7 @@ public class HomeJFrame extends JFrame {
 		JButton btnDoner = new JButton("Find Doners");
 		btnDoner.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				DonerJFrame dj = new DonerJFrame();
+				SearchDoner dj = new SearchDoner();
 				dj.setVisible(true);
 				setVisible(false);
 			}
@@ -84,6 +84,13 @@ public class HomeJFrame extends JFrame {
 		getContentPane().add(btnDoner);
 		
 		JButton btnPatient = new JButton("Find Patients");
+		btnPatient.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				FindPatientJFrame fp = new FindPatientJFrame();
+				fp.setVisible(true);
+				setVisible(false);
+			}
+		});
 		btnPatient.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnPatient.setForeground(Color.WHITE);
 		btnPatient.setBackground(new Color(165, 42, 42));
@@ -98,6 +105,13 @@ public class HomeJFrame extends JFrame {
 		getContentPane().add(btnLocation);
 		
 		JButton btnNewDoner = new JButton("New Doner");
+		btnNewDoner.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				NewUser nu = new NewUser();
+				nu.setVisible(true);
+				setVisible(false);
+			}
+		});
 		btnNewDoner.setForeground(Color.WHITE);
 		btnNewDoner.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnNewDoner.setBackground(new Color(0, 128, 0));
